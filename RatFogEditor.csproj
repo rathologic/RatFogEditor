@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>Templates\icon.ico</ApplicationIcon>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
     <ProduceReferenceAssembly>False</ProduceReferenceAssembly>
   </PropertyGroup>
 
@@ -20,7 +20,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Templates\icon.ico" />
+    <Content Include="Resources\icon.ico" />
   </ItemGroup>
 
   <ItemGroup>

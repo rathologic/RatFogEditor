@@ -24,17 +24,17 @@ namespace RatFogEditor
             loadFile(template, "Classic HD template");
         }
 
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-
-        }
-
         private void btnLoadFile_Click(object sender, EventArgs e)
         {
             if (loadFileDialog.ShowDialog() == DialogResult.OK) {
                 string filePath = loadFileDialog.FileName;
                 loadFileWrapper(filePath);
             }
+        }
+
+        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            // this is load-bearing
         }
 
         private void btnPickCol1_Click(object sender, EventArgs e) { setColor(colorFog1);  }
@@ -99,13 +99,11 @@ namespace RatFogEditor
 
                 // Read each block, 1 at a time
                 for (int i = 0; i < game.Length; i++) {
-                    System.Diagnostics.Debug.WriteLine("Now loading Block " + (i + 1));
                     readBlock(reader, game[i], i + 1);
                 }
 
                 // If not alpha, load plague district colors
                 if (game == classichd) {
-                    System.Diagnostics.Debug.WriteLine("Loading plague colors");
                     readPlagueColors(reader);
                 }
 
@@ -144,19 +142,16 @@ namespace RatFogEditor
                             game = alpha;
                             break;
                         default:
-                            System.Diagnostics.Debug.WriteLine("File length " + fileLen + " not recognized; assuming Classic HD");
                             game = classichd;
                             break;
                     }
 
                     for (int i = 0; i < game.Length; i++) {
-                        System.Diagnostics.Debug.WriteLine("Writing to Block " + (i + 1));
                         writeBlock(writer, game[i], i + 1);
                     }
 
                     // If not alpha, write plague district colors
                     if (game == classichd) {
-                        System.Diagnostics.Debug.WriteLine("Exporting plague colors");
                         writePlagueColors(writer);
                     }
 
@@ -320,9 +315,6 @@ namespace RatFogEditor
 
             long end = r.BaseStream.Position;
 
-            System.Diagnostics.Debug.WriteLine("Read " + (end - start) + " bytes (from " + start + " to " + end + ")");
-            System.Diagnostics.Debug.WriteLine("Loaded color " +red+", "+green+", "+blue);
-
             return System.Drawing.Color.FromArgb(red, green, blue);
         }
 
@@ -352,8 +344,6 @@ namespace RatFogEditor
             r.Write(bcol, 0, 12);
 
             long end = r.BaseStream.Position;
-
-            System.Diagnostics.Debug.WriteLine("Wrote color " + c.R + ", " + c.G + ", " + c.B);
         }
 
         private void readPlagueColors(BinaryReader reader)
@@ -427,7 +417,6 @@ namespace RatFogEditor
             int green = (int)(BitConverter.ToSingle(r.ReadBytes(4), 0) * 128);
             int blue = (int)(BitConverter.ToSingle(r.ReadBytes(4), 0) * 128);
 
-            System.Diagnostics.Debug.WriteLine("Loaded color(?) " + red + ", " + green + ", " + blue);
             return System.Drawing.Color.FromArgb(red, green, blue);
         }
 
@@ -435,7 +424,6 @@ namespace RatFogEditor
         {
             // Reads a 4-byte float from file.
             float time = BitConverter.ToSingle(r.ReadBytes(4), 0);
-            System.Diagnostics.Debug.WriteLine("Loaded float " + time);
             return time;
         }
 
@@ -445,7 +433,6 @@ namespace RatFogEditor
             Single num = (Single)n.Value;
             byte[] numb = BitConverter.GetBytes(num);
             r.Write(numb);
-            System.Diagnostics.Debug.WriteLine("Wrote float " + num);
         }
 
         private void btnRain1_Click_1(object sender, EventArgs e)
