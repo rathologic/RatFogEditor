@@ -327,7 +327,7 @@
             this.btnRain1.TabIndex = 2;
             this.btnRain1.Text = "Rain";
             this.btnRain1.UseVisualStyleBackColor = true;
-            this.btnRain1.Click += new System.EventHandler(this.btnRain1_Click_1);
+            this.btnRain1.Click += new System.EventHandler(this.btnRain1_Click);
             // 
             // fogColorSel1
             // 
@@ -494,9 +494,10 @@
             // 
             // loadFileDialog
             // 
+            this.loadFileDialog.FileName = "weather.bin";
             this.loadFileDialog.Filter = "BIN Files (*.bin)|*.bin|All Files (*.*)|*.*";
             this.loadFileDialog.Title = "Select weather.bin file";
-            this.loadFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            //this.loadFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.loadFileDialog_FileOk);
             // 
             // colorDialog1
             // 
@@ -528,7 +529,7 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(206, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Pathologic Fog Editor v1.0.0";
+            this.label1.Text = "Pathologic Fog Editor v1.0.1";
             // 
             // label3
             // 

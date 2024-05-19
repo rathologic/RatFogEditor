@@ -32,13 +32,6 @@ namespace RatFogEditor
             }
         }
 
-        private void openFileDialog1_FileOk(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            // this is load-bearing
-        }
-
-        private void btnPickCol1_Click(object sender, EventArgs e) { setColor(colorFog1);  }
-        
         private void setColor(PictureBox box) {
             colorDialog1.Color = box.BackColor;
             if (colorDialog1.ShowDialog() == DialogResult.OK) {
@@ -435,155 +428,37 @@ namespace RatFogEditor
             r.Write(numb);
         }
 
-        private void btnRain1_Click_1(object sender, EventArgs e)
-        {
-            setColor(colorRain1);
-        }
-
-        private void btnRain2_Click(object sender, EventArgs e)
-        {
-            setColor(colorRain2);
-        }
-
-        private void btnRain3_Click(object sender, EventArgs e)
-        {
-            setColor(colorRain3);
-        }
-
-        private void btnRain4_Click(object sender, EventArgs e)
-        {
-            setColor(colorRain4);
-        }
-
-        private void btnRain5_Click(object sender, EventArgs e)
-        {
-            setColor(colorRain5);
-        }
-
-        private void btnRain6_Click(object sender, EventArgs e)
-        {
-            setColor(colorRain6);
-        }
-
-        private void btnFog2_Click(object sender, EventArgs e)
-        {
-            setColor(colorFog2);
-        }
-
-        private void btnFog3_Click(object sender, EventArgs e)
-        {
-            setColor(colorFog3);
-        }
-
-        private void btnFog4_Click(object sender, EventArgs e)
-        {
-            setColor(colorFog4);
-        }
-
-        private void btnFog5_Click(object sender, EventArgs e)
-        {
-            setColor(colorFog5);
-        }
-
-        private void btnFog6_Click(object sender, EventArgs e)
-        {
-            setColor(colorFog6);
-        }
-
-        private void btnSun1_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun1);
-        }
-
-        private void btnSun_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun2);
-        }
-
-        private void btnSun3_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun3);
-        }
-
-        private void btnSun4_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun4);
-        }
-
-        private void btnSun5_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun5);
-        }
-
-        private void btnSun6_Click(object sender, EventArgs e)
-        {
-            setColor(colorSun6);
-        }
-
-        private void btnAmb1_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb1);
-        }
-
-        private void btnAmb2_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb2);
-        }
-
-        private void btnAmb3_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb3);
-        }
-
-        private void btnAmb4_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb4);
-        }
-
-        private void btnAmb5_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb5);
-        }
-
-        private void btnAmb6_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmb6);
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmbP);
-        }
-
-        private void btnSunP_Click(object sender, EventArgs e)
-        {
-            setColor(colorSunP);
-        }
-
-        private void btnAmbB_Click(object sender, EventArgs e)
-        {
-            setColor(colorAmbB);
-        }
-
-        private void btnSunB_Click(object sender, EventArgs e)
-        {
-            setColor(colorSunB);
-        }
-
-        private void btnGeneralTint_Click(object sender, EventArgs e)
-        {
-            setColor(colGeneralTint);
-        }
-
-        private void btnUnknownP_Click(object sender, EventArgs e)
-        {
-            setColor(colUnknown2);
-        }
-
-        private void btnUnknownB_Click(object sender, EventArgs e)
-        {
-            setColor(colUnknown1);
-        }
+        private void btnRain1_Click(object sender, EventArgs e) { setColor(colorRain1); }
+        private void btnRain2_Click(object sender, EventArgs e) { setColor(colorRain2); }
+        private void btnRain3_Click(object sender, EventArgs e) { setColor(colorRain3); }
+        private void btnRain4_Click(object sender, EventArgs e) { setColor(colorRain4); }
+        private void btnRain5_Click(object sender, EventArgs e) { setColor(colorRain5); }
+        private void btnRain6_Click(object sender, EventArgs e) { setColor(colorRain6); }
+        private void btnPickCol1_Click(object sender, EventArgs e) { setColor(colorFog1); }
+        private void btnFog2_Click(object sender, EventArgs e) { setColor(colorFog2); }
+        private void btnFog3_Click(object sender, EventArgs e) { setColor(colorFog3); }
+        private void btnFog4_Click(object sender, EventArgs e) { setColor(colorFog4); }
+        private void btnFog5_Click(object sender, EventArgs e) { setColor(colorFog5); }
+        private void btnFog6_Click(object sender, EventArgs e) { setColor(colorFog6); }
+        private void btnSun1_Click(object sender, EventArgs e) { setColor(colorSun1); }
+        private void btnSun_Click(object sender, EventArgs e) { setColor(colorSun2); }
+        private void btnSun3_Click(object sender, EventArgs e) { setColor(colorSun3); }
+        private void btnSun4_Click(object sender, EventArgs e) { setColor(colorSun4); }
+        private void btnSun5_Click(object sender, EventArgs e) { setColor(colorSun5); }
+        private void btnSun6_Click(object sender, EventArgs e) { setColor(colorSun6); }
+        private void btnAmb1_Click(object sender, EventArgs e) { setColor(colorAmb1); }
+        private void btnAmb2_Click(object sender, EventArgs e) { setColor(colorAmb2); }
+        private void btnAmb3_Click(object sender, EventArgs e) { setColor(colorAmb3); }
+        private void btnAmb4_Click(object sender, EventArgs e) { setColor(colorAmb4); }
+        private void btnAmb5_Click(object sender, EventArgs e) { setColor(colorAmb5); }
+        private void btnAmb6_Click(object sender, EventArgs e) { setColor(colorAmb6); }
+        private void button5_Click(object sender, EventArgs e) { setColor(colorAmbP); }
+        private void btnSunP_Click(object sender, EventArgs e) { setColor(colorSunP); }
+        private void btnAmbB_Click(object sender, EventArgs e) { setColor(colorAmbB); }
+        private void btnSunB_Click(object sender, EventArgs e) { setColor(colorSunB); }
+        private void btnGeneralTint_Click(object sender, EventArgs e) { setColor(colGeneralTint); }
+        private void btnUnknownP_Click(object sender, EventArgs e) { setColor(colUnknown2); }
+        private void btnUnknownB_Click(object sender, EventArgs e) { setColor(colUnknown1); }
 
         private void btnSaveFile_Click(object sender, EventArgs e)
         {
